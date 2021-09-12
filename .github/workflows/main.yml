@@ -20,4 +20,4 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl "https://zhaose-pan.herokuapp.com"
+        run: curl -d '{"path":"home","password":"password","depth":3}' -H "Content-Type:\ application/json" -X POST https://zhaose-al.herokuapp.com/api/rebuild

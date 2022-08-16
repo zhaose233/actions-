@@ -5,6 +5,7 @@ name: herokuapp_p_m
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
+  workflow_dispatch:
   schedule:
    - cron: "0/10 * * * *"
 

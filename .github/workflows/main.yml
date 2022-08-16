@@ -6,7 +6,7 @@ name: herokuapp_p_m
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   schedule:
-   - cron: "0/25 * * * *"
+   - cron: "0/10 * * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -20,4 +20,4 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: curl -d '{"path":"home","password":"password","depth":3}' -H "Content-Type:\ application/json" -X POST https://zhaose-al.herokuapp.com/api/rebuild
+        run: curl https://heroku-downloading.herokuapp.com/dl/
